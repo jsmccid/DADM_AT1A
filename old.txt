@@ -1,0 +1,41 @@
+latelate <- tibble(matrix(nrow = 7, ncol = 4))
+names(latelate) <- c("Option", "Description", "Assumptions_Addressed", "Limitations")
+latelate$Option <- c("Correlation", "Bayesian Inference", "Penalty value")
+
+cordesc <- "Correlation, as demonstrated in the PERT-Correlated simulation can be used to reorder the values, while maintaining their distributions, such that the tasks are correlated. By doing so tasks at the higher end of run time for that task, are more likely to be grouped with other tasks that are similarly located toward Tmax"
+  
+bayesdesc <- "test2"
+  
+pendesc <- "test3"
+
+latelate$Description <- c(cordesc, bayesdesc, pendesc)
+
+
+coraa <- "Consistent underestimation means that all tasks run into or over higher estimates.
+
+If the importance of the project overall is reduced this method reflects this.
+
+Uncertainty is accounted for as long as it is relatively consistent across the project.
+
+Similarly, miss timing causing overrun is accounted for if consistent.
+
+By correlating the simulated values that ran higher into the estimation are more likely to be in grouped / in the same simulation. This offsets high probability completion times higher to Tmax."
+  
+bayesaa <- "test2"
+  
+penaa <- "test3"
+
+latelate$Assumptions_Addressed <- c(coraa, bayesaa, penaa) 
+
+
+corlim <- "If project priority is changing or sporadic, this is not represented. Though may result in similar outcomes.
+
+This method assumes a consistent effect of uncertainty across tasks. If uncertainty is changing or compounding it is not necessarily accounted for.
+
+Minimal or no movement in Tmin and Tmax. Correlation has a maximum amount that the overall timeline can be shortened by. From total Tmin to total Tmax. This may already be represented in the simulation. Meaning when challenges cause overrun they are not accounted for."
+  
+bayeslim <- "test2"
+  
+penlim <- "test3"
+
+latelate$Limitations <- c(corlim, bayeslim, penlim) 
